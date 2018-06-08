@@ -15,14 +15,28 @@ using System.Windows.Shapes;
 
 namespace TimeTrak.WindowsApp
 {
+    
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        public string localDB;
         public MainWindow()
         {
+            localDB = Properties.Settings.Default.LocalDB;
             InitializeComponent();
+            
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            //Properties.Settings.Default.LocalDB = textBox.Text;
+            //Properties.Settings.Default.Var2 = textBox.Text;
+            Properties.Settings.Default.Save();
+            //textBox.Text = Properties.Settings.Default.LocalDB;
+            TimeTrak.WindowsApp.Windows.Configuration cfg = new TimeTrak.WindowsApp.Windows.Configuration();
+            cfg.Show();
         }
     }
 }
