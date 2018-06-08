@@ -1,1 +1,0 @@
-C:\VS\TimeTrak\UserInterfaces\TimeTrak.WindowsApp\bin\Debug\TimeTrak.WindowsApp.exe.config
