@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TimeTrak.WindowsApp.Features;
 
 namespace TimeTrak.WindowsApp
 {
@@ -26,7 +27,24 @@ namespace TimeTrak.WindowsApp
         {
             localDB = Properties.Settings.Default.LocalDB;
             InitializeComponent();
-            
+
+            var key = new HotKey(
+                (ModifierKeys.Alt),
+                Key.A,
+                this,
+                delegate
+                {
+                    ShowMainWindow();
+                }
+            );
+        }
+
+        private static void ShowMainWindow()
+        {
+            App.Current.MainWindow.Show();
+            App.Current.MainWindow.Focus();
+            System.Media.SystemSounds.Asterisk.Play();
+            System.Windows.Forms.MessageBox.Show("Alt+B key pressed");
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -37,6 +55,12 @@ namespace TimeTrak.WindowsApp
             //textBox.Text = Properties.Settings.Default.LocalDB;
             TimeTrak.WindowsApp.Windows.Configuration cfg = new TimeTrak.WindowsApp.Windows.Configuration();
             cfg.Show();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            e.Cancel = true;
+            this.Hide();
         }
     }
 }
