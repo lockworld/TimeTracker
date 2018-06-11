@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserInterfaces", "UserInterfaces", "{08580D4A-ADB2-4DF8-8E58-B8B2B5EF3B7B}"
 EndProject
@@ -17,6 +17,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Sources", "_Sources", "{A6
 	ProjectSection(SolutionItems) = preProject
 		sourcelist.md = sourcelist.md
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{2267D511-60B5-4750-A455-AAF213F006D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTrak.WindowsService", "Services\TimeTrak.WindowsService\TimeTrak.WindowsService.csproj", "{DA86DF14-7574-4123-864D-E375047E1D6E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Installers", "Installers", "{59AD4088-32E4-48BD-B6AB-9AEAF2835F63}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WindowsPackage", "WindowsPackage", "{A88F7686-0EBA-4D54-80BE-2B2E9EEBBD10}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "TimeTrak for Windows", "Installers\TimeTrak.Installer\TimeTrak.Installer.vdproj", "{92C3ECF1-D2EA-4DE2-8797-1B0B6676AE61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +46,12 @@ Global
 		{0444DE05-5056-4B54-A9EA-8ABD7479721A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0444DE05-5056-4B54-A9EA-8ABD7479721A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0444DE05-5056-4B54-A9EA-8ABD7479721A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA86DF14-7574-4123-864D-E375047E1D6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA86DF14-7574-4123-864D-E375047E1D6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA86DF14-7574-4123-864D-E375047E1D6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA86DF14-7574-4123-864D-E375047E1D6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92C3ECF1-D2EA-4DE2-8797-1B0B6676AE61}.Debug|Any CPU.ActiveCfg = Debug
+		{92C3ECF1-D2EA-4DE2-8797-1B0B6676AE61}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,5 +60,8 @@ Global
 		{8781787E-E5FB-48C4-BACD-069E24A7F98C} = {08580D4A-ADB2-4DF8-8E58-B8B2B5EF3B7B}
 		{82E5CD86-3F04-4A90-97B0-9BA3BE00ACA8} = {08580D4A-ADB2-4DF8-8E58-B8B2B5EF3B7B}
 		{0444DE05-5056-4B54-A9EA-8ABD7479721A} = {6D635378-ECEC-404F-8E41-4D9405A3EBDF}
+		{DA86DF14-7574-4123-864D-E375047E1D6E} = {2267D511-60B5-4750-A455-AAF213F006D3}
+		{A88F7686-0EBA-4D54-80BE-2B2E9EEBBD10} = {59AD4088-32E4-48BD-B6AB-9AEAF2835F63}
+		{92C3ECF1-D2EA-4DE2-8797-1B0B6676AE61} = {A88F7686-0EBA-4D54-80BE-2B2E9EEBBD10}
 	EndGlobalSection
 EndGlobal

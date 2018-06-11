@@ -9,3 +9,19 @@ This document contains some sources used in researching concepts for this applic
 
 **Hide window on close**
 - https://stackoverflow.com/questions/638942/wpf-hide-on-close
+
+**Create a Windows Service**
+- https://docs.microsoft.com/en-us/dotnet/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer
+- https://docs.microsoft.com/en-us/dotnet/framework/windows-services/introduction-to-windows-service-applications
+
+** Install Service without User Account**
+- https://stackoverflow.com/a/2253066
+
+** Delete/Uninstall Service**
+- https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc742045(v=ws.11) (Make sure Services.msc is closed or it will "hang" the uninstall...)
+
+** WIX installer to allow creating installer that installs and registers services **
+- http://wixtoolset.org/
+- https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension
+
+
