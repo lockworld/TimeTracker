@@ -64,5 +64,14 @@ namespace TimeTrak.WindowsApp.Properties {
                 this["UserName"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("TimeTrak")]
+        public string AppNamePlain {
+            get {
+                return ((string)(this["AppNamePlain"]));
+            }
+        }
     }
 }
