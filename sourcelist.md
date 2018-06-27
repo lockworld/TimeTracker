@@ -24,4 +24,6 @@ This document contains some sources used in researching concepts for this applic
 - http://wixtoolset.org/
 - https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension
 
+** Dock a window to the AppBar **
+- https://github.com/mgaffigan/WpfAppBar
 
