@@ -27,3 +27,5 @@ This document contains some sources used in researching concepts for this applic
 ** Dock a window to the AppBar **
 - https://github.com/mgaffigan/WpfAppBar
 
+** App to App Communication **
+- https://docs.microsoft.com/en-us/windows/uwp/app-to-app/
