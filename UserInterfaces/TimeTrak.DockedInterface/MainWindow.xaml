@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TimeTrak.DockedInterface"
         xmlns:wab="clr-namespace:WindowsAppBar;assembly=WindowsAppBar"
+        xmlns:uc="clr-namespace:TimeTrak.DockedInterface.UserControls"
         mc:Ignorable="d"
              DataContext="{Binding RelativeSource={RelativeSource Self}}"
         Title="TimeTrak™" DockedWidthOrHeight="200" MinWidth="150" MinHeight="150">
@@ -43,7 +44,7 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
-                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Border x:Name="AppMenu" Background="Gray"  Height="25" VerticalAlignment="Top" MouseEnter="AppMenu_MouseEnter" MouseLeave="AppMenu_MouseLeave">
                 <Grid x:Name="AppMenuGrid">
@@ -71,7 +72,9 @@
                     </Grid>
                 </Grid>
             </Border>
-           
+            <uc:RTE HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MinHeight="250" Grid.Row="1" BorderThickness="1 1 3 3" BorderBrush="Black"/>
+            
+            
         </Grid>
     </DockPanel>
 

@@ -41,3 +41,7 @@ This document contains some sources used in researching concepts for this applic
 
 ** App to App Communication **
 - https://docs.microsoft.com/en-us/windows/uwp/app-to-app/
+
+
+** Rich Text Box **
+- https://docs.microsoft.com/en-us/dotnet/framework/wpf/controls/richtextbox-overview
