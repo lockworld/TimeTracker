@@ -24,6 +24,7 @@ namespace TimeTrak.DockedInterface
     /// </summary>
     public partial class MainWindow
     {
+        private bool HamburgerMouseClicked = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -76,7 +77,58 @@ namespace TimeTrak.DockedInterface
 
         private void AppMenu_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
         {
-            Border sp = sender as Border;
+            //Border sp = sender as Border;
+            //DoubleAnimation db = new DoubleAnimation();
+            ////db.From = 12;
+            //db.To = 125;
+            //db.Duration = TimeSpan.FromSeconds(0.5);
+            //db.AutoReverse = false;
+            //db.RepeatBehavior = new RepeatBehavior(1);
+            //sp.BeginAnimation(StackPanel.HeightProperty, db);
+
+        }
+        private void HamburgerMouseDown(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            HamburgerMouseClicked = true;
+        }
+        private void AppMouseUp(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            HamburgerMouseClicked = false;
+        }
+        private void AppMenu_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            //Border sp = sender as Border;
+            //DoubleAnimation db = new DoubleAnimation();
+            ////db.From = 12;
+            //db.To = 25;
+            //db.Duration = TimeSpan.FromSeconds(0.5);
+            //db.AutoReverse = false;
+            //db.RepeatBehavior = new RepeatBehavior(1);
+            //sp.BeginAnimation(StackPanel.HeightProperty, db);
+
+        }
+        private void HamburgerMouseUp(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            if(HamburgerMouseClicked)
+            {
+                if(AppMenu.Height==25)
+                {
+                    ShowAppMenu();
+                    HamburgerMenu.Visibility = Visibility.Collapsed;
+                    CloseMenu.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    HideAppMenu();
+                    HamburgerMenu.Visibility = Visibility.Visible;
+                    CloseMenu.Visibility = Visibility.Collapsed;
+                }
+            }
+        }
+
+        private void ShowAppMenu()
+        {
+            Border sp = AppMenu as Border;
             DoubleAnimation db = new DoubleAnimation();
             //db.From = 12;
             db.To = 125;
@@ -84,11 +136,10 @@ namespace TimeTrak.DockedInterface
             db.AutoReverse = false;
             db.RepeatBehavior = new RepeatBehavior(1);
             sp.BeginAnimation(StackPanel.HeightProperty, db);
-
         }
-        private void AppMenu_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        private void HideAppMenu()
         {
-            Border sp = sender as Border;
+            Border sp = AppMenu as Border;
             DoubleAnimation db = new DoubleAnimation();
             //db.From = 12;
             db.To = 25;
@@ -96,7 +147,6 @@ namespace TimeTrak.DockedInterface
             db.AutoReverse = false;
             db.RepeatBehavior = new RepeatBehavior(1);
             sp.BeginAnimation(StackPanel.HeightProperty, db);
-
         }
     }
 }
